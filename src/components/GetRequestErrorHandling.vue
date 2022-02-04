@@ -19,6 +19,8 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
   name: "get-request-error-handling",
   data() {
@@ -28,24 +30,13 @@ export default {
     };
   },
   created() {
-    // GET request using fetch with error handling
-    fetch("https://api.npms.io/v2/invalid-url")
-      .then(async response => {
-        const data = await response.json();
-
-        // check for error response
-        if (!response.ok) {
-          // get error message from body or default to response statusText
-          const error = (data && data.message) || response.statusText;
-          return Promise.reject(error);
-        }
-
-        this.totalVuePackages = data.total;
-      })
-      .catch(error => {
-        this.errorMessage = error;
-        console.error("There was an error!", error);
-      });
+      // GET request using axios with error handling
+  axios.get("https://api.npms.io/v2/invalid-url")
+    .then(response => this.totalVuePackages = response.data.total)
+    .catch(error => {
+      this.errorMessage = error.message;
+      console.error("There was an error!", error);
+    });
   }
 };
 </script>
