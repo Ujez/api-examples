@@ -1,20 +1,22 @@
 <template>
   <div>
-    <h3 class="p-3 text-center">Vue HTTP GET Requests with Fetch</h3>
-    <get-request/>
+    <!-- <get-request/> -->
    <!-- <get-request-async-await/> -->
+    <get-request-error-handling/>
   </div>
 </template>
 
 <script>
-import GetRequest from "./components/GetRequest.vue";
+// import GetRequest from "./components/GetRequest.vue";
 // import GetRequestAsyncAwait from "./components/GetRequestAsyncAwait.vue";
+import   GetRequestErrorHandling from "./components/GetRequestErrorHandling.vue";
 
 export default {
   name: "app",
   components: {
-    GetRequest,
+    // GetRequest,
   //  GetRequestAsyncAwait
+    GetRequestErrorHandling,
   }
 };
 </script>
