@@ -1,11 +1,18 @@
 <template>
-  <div class="card text-center m-3">
-    <h5 class="card-header">GET Request with Async/Await</h5>
-    <div class="card-body">Total vue packages: {{totalVuePackages}}</div>
-  </div>
+  <div class="p-20 bg-blue-100">
+    <h3 class="text-blue-300 mb-4 text-sm font-bold">
+ GET Request with Async/Await
+    </h3>
+    <div class="bg-white p-6 rounded-lg shadow-lg">
+      <h2 class="text-2xl font-bold mb-2 text-gray-800">Here is what you requested</h2>
+      <p class="text-gray-700 text-red-500">Total vue packages: <span class="text-blue-300" > {{totalVuePackages}}</span></p>
+    </div>
+</div>
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
   name: "get-request-async-await",
   data() {
@@ -14,10 +21,9 @@ export default {
     };
   },
   async created() {
-    // GET request using fetch with async/await
-    const response = await fetch("https://api.npms.io/v2/search?q=vue");
-    const data = await response.json();
-    this.totalVuePackages = data.total;
+      // GET request using axios with async/await
+  const response = await axios.get("https://api.npms.io/v2/package/react");
+  this.totalVuePackages = response.data.evaluation.quality;
   }
 };
 </script>
