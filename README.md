@@ -1,8 +1,8 @@
-# Vue 3 + Vite +  GET Request with error handling + Tailwindcss + Axios
+# Vue 3 + Vite +  GET Request with error set HTTP headers + Tailwindcss + Axios
 
 
 # HOW IT WORKS
-This sends a GET request from Vue to an invalid url on the npm api then assigns the error message to the `errorMessage` component data property and logs the error to the console.
+This sends the same GET request again from Vue using axios with the HTTP `Content-Type` header set to `application/json`.
 
 This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
