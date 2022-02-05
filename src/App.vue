@@ -2,8 +2,8 @@
   <div>
     <!-- <post-request/> -->
        <!-- <post-request-async-await/> -->
-    <post-request-error-handling/>
-    <!-- <post-request-set-headers/> -->
+    <!-- <post-request-error-handling/> -->
+    <post-request-set-headers/>
     <!-- <get-request/> -->
    <!-- <get-request-async-await/> -->
     <!-- <get-request-error-handling/> -->
@@ -15,8 +15,8 @@
 
 // import PostRequest from "./components/postrequests/PostRequest.vue";
 // import PostRequestAsyncAwait from "./components/postrequests/PostRequestAsyncAwait.vue";
-import PostRequestErrorHandling from "./components/postrequests/PostRequestErrorHandling.vue";
-// import PostRequestSetHeaders from "./PostRequestSetHeaders";
+// import PostRequestErrorHandling from "./components/postrequests/PostRequestErrorHandling.vue";
+import PostRequestSetHeaders from "./components/postrequests/PostRequestSetHeaders.vue";
 // import GetRequest from "./components/GetRequest.vue";
 // import GetRequestAsyncAwait from "./components/GetRequestAsyncAwait.vue";
 // import   GetRequestErrorHandling from "./components/GetRequestErrorHandling.vue";
@@ -27,8 +27,8 @@ export default {
   components: {
     // PostRequest,
     // PostRequestAsyncAwait,
-    PostRequestErrorHandling,
-    // PostRequestSetHeaders
+    // PostRequestErrorHandling,
+    PostRequestSetHeaders
     // GetRequest,
   //  GetRequestAsyncAwait
     // GetRequestErrorHandling,

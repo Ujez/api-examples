@@ -1,30 +1,35 @@
 <template>
   <div class="p-20 bg-blue-100">
     <h3 class="text-blue-300 mb-4 text-sm font-bold">
-    GET Request with Set Headers
+   POST Request with Set Headers
     </h3>
     <div class="bg-white p-6 rounded-lg shadow-lg">
-      <h2 class="text-2xl font-bold mb-2 text-gray-800">Here is what you requested</h2>
-      <p class="text-gray-700 text-red-500">Total vue packages: <span class="text-blue-300" > {{totalVuePackages}}</span></p>
+      <h2 class="text-2xl font-bold mb-2 text-gray-800">Here is what you posted</h2>
+      <p class="text-gray-700 text-red-500">Returned Id: <span class="text-red-300" > {{articleId}}</span></p>
     </div>
-</div>
+  </div>
 </template>
 
 <script>
 import axios from 'axios';
 
 export default {
-  name: "get-request-set-headers",
+  name: "post-request-set-headers",
   data() {
     return {
-      totalVuePackages: null
+     articleId: null,
+      errorMessage: null
     };
   },
-  created() {
-    // GET request using axios with set headers
-    const headers = { "Content-Type": "application/json" };
-    axios.get("https://api.npms.io/v2/search?q=vue", { headers })
-      .then(response => this.totalVuePackages = response.data.total);
-  }
+created() {
+  // POST request using axios with set headers
+  const article = { title: "Vue POST Request Example" };
+  const headers = { 
+    "Authorization": "Bearer my-token",
+    "My-Custom-Header": "foobar"
+  };
+  axios.post("https://reqres.in/api/articles", article, { headers })
+    .then(response => this.articleId = response.data.id);
+}
 };
 </script>
