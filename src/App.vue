@@ -1,8 +1,8 @@
 <template>
   <div>
     <!-- <post-request/> -->
-       <post-request-async-await/>
-    <!-- <post-request-error-handling/> -->
+       <!-- <post-request-async-await/> -->
+    <post-request-error-handling/>
     <!-- <post-request-set-headers/> -->
     <!-- <get-request/> -->
    <!-- <get-request-async-await/> -->
@@ -14,8 +14,8 @@
 <script>
 
 // import PostRequest from "./components/postrequests/PostRequest.vue";
-import PostRequestAsyncAwait from "./components/postrequests/PostRequestAsyncAwait.vue";
-// import PostRequestErrorHandling from "./PostRequestErrorHandling";
+// import PostRequestAsyncAwait from "./components/postrequests/PostRequestAsyncAwait.vue";
+import PostRequestErrorHandling from "./components/postrequests/PostRequestErrorHandling.vue";
 // import PostRequestSetHeaders from "./PostRequestSetHeaders";
 // import GetRequest from "./components/GetRequest.vue";
 // import GetRequestAsyncAwait from "./components/GetRequestAsyncAwait.vue";
@@ -26,8 +26,8 @@ export default {
   name: "app",
   components: {
     // PostRequest,
-    PostRequestAsyncAwait,
-    // PostRequestErrorHandling,
+    // PostRequestAsyncAwait,
+    PostRequestErrorHandling,
     // PostRequestSetHeaders
     // GetRequest,
   //  GetRequestAsyncAwait
