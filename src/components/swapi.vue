@@ -25,19 +25,12 @@ export default {
             starwarsallfilms:[]
         }
     },
-    // methods:{
-    //     getAllStarWarsFilms(){
-    //         fetch("https://swapi.dev/api/films/")
-    //         .then(response=>response.json())
-    //         .then(data=>{
-    //             this.starwarsallfilms=data;
-    //         })
-    //     }
-    // },
-      created() {
-        axios.get("https://swapi.dev/api/films/")
+    methods:{
+        getAllStarWarsFilms(){
+           axios.get("https://swapi.dev/api/films/")
       .then(response => this.starwarsallfilms = response.data);
-  },
+        }
+    },
 }
 </script>
 
