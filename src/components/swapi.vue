@@ -1,6 +1,6 @@
 <template>
 <div>
-     <button @click="getAllStarWarsFilms" class="mt-5 mx-5 h-10 px-6 font-semibold rounded-md bg-black text-white" type="submit">
+     <button  @click="getAllStarWarsFilms" class="mt-5 mx-5 h-10 px-6 font-semibold rounded-md bg-black text-white active:bg-yellow-500" type="submit">
           show starwars films
     </button>
         <div class="bg-white rounded-lg shadow lg:w-1/3">
@@ -16,6 +16,8 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
     name: "starwars",
       data() {
@@ -23,15 +25,19 @@ export default {
             starwarsallfilms:[]
         }
     },
-    methods:{
-        getAllStarWarsFilms(){
-            fetch("https://swapi.dev/api/films/")
-            .then(response=>response.json())
-            .then(data=>{
-                this.starwarsallfilms=data;
-            })
-        }
-    }
+    // methods:{
+    //     getAllStarWarsFilms(){
+    //         fetch("https://swapi.dev/api/films/")
+    //         .then(response=>response.json())
+    //         .then(data=>{
+    //             this.starwarsallfilms=data;
+    //         })
+    //     }
+    // },
+      created() {
+        axios.get("https://swapi.dev/api/films/")
+      .then(response => this.starwarsallfilms = response.data);
+  },
 }
 </script>
 

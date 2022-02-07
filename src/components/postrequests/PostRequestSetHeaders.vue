@@ -21,6 +21,7 @@ export default {
       errorMessage: null
     };
   },
+  
 created() {
   // POST request using axios with set headers
   const article = { title: "Vue POST Request Example" };

@@ -1,6 +1,7 @@
 <template>
   <div>
     <swapi/>
+
     <!-- <post-request/> -->
        <!-- <post-request-async-await/> -->
     <!-- <post-request-error-handling/> -->
@@ -26,7 +27,7 @@ import swapi from "./components/swapi.vue"
 export default {
   name: "app",
   components: {
-    swapi
+    swapi,
     // PostRequest,
     // PostRequestAsyncAwait,
     // PostRequestErrorHandling,
