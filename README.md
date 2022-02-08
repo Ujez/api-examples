@@ -1,4 +1,4 @@
-# Vue 3 + Vite +  Simple POST Request with Set Headers + Tailwindcss + Axios
+# Vue 3 + Vite + Tailwindcss + Axios
 
 
 # HOW IT WORKS
