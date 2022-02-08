@@ -1,7 +1,7 @@
 <template>
   <div>
-    <swapi/>
-
+     <listofcountrie/>
+    <!-- <swapi/> -->
     <!-- <post-request/> -->
        <!-- <post-request-async-await/> -->
     <!-- <post-request-error-handling/> -->
@@ -14,7 +14,8 @@
 </template>
 
 <script>
-import swapi from "./components/swapi.vue"
+import listofcountrie from "./components/ListOfCountries.vue"
+// import swapi from "./components/swapi.vue"
 // import PostRequest from "./components/postrequests/PostRequest.vue";
 // import PostRequestAsyncAwait from "./components/postrequests/PostRequestAsyncAwait.vue";
 // import PostRequestErrorHandling from "./components/postrequests/PostRequestErrorHandling.vue";
@@ -27,7 +28,8 @@ import swapi from "./components/swapi.vue"
 export default {
   name: "app",
   components: {
-    swapi,
+    listofcountrie,
+    // swapi,
     // PostRequest,
     // PostRequestAsyncAwait,
     // PostRequestErrorHandling,
